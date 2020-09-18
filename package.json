@@ -1,0 +1,27 @@
+{
+  "name": "interactive-learning",
+  "version": "1.0.0",
+  "description": "final year project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alert": "^5.0.5",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "express-session": "^1.17.1",
+    "hbs": "^4.1.1",
+    "js-alert": "^1.0.4",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.5",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "popups": "^1.1.3"
+  }
+}
