@@ -6,10 +6,58 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <p>dashboard</p>
-    <h2>Welcome {{name}}</h2>
-    <a href="/users/logout" class="btn btn-secondary">Logout</a>
-    <a href="/test" class="btn btn-secondary">Test</a>
+    <nav class="navbar navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">iLearn</a>
+        
+        <form method="get" action="/users/logout">
+        
+            <button type="submit" class="btn btn-light">Logout</button>
+        </form>
+        
+    </nav>
+    <div class="jumbotron">
+        <h2>Welcome {{name}}</h2>
+        <br><br>
+        
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="/material/learn.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Learn</h5>
+                        <p class="card-text">Learning never stops.</p>
+                        <a href="#" class="btn btn-primary">Let's Go</a>
+                    </div>
+                </div>
+            </div>
+             <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Practice</h5>
+                        <p class="card-text">Practice makes man perfect.</p>
+                        <a href="#" class="btn btn-primary">Let's Go</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Test</h5>
+                        <p class="card-text">Test your knowledge.</p>
+                        <a href="/test" class="btn btn-primary">Let's Go</a>
+                    </div>
+                </div>
+            </div>          
+
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     
 </body>
 </html>
