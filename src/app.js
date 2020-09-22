@@ -22,6 +22,7 @@ require('../src/db/mongoose')
 app.engine('handlebars', hbs({defaultLayout:'layout', layoutDir:layoutPath, partialsDir:partialPath}))
 app.set('view engine','handlebars')
 app.set('views', viewPath)
+app.use(express.static('../templates'))
 //hbs.registerPartials(partialPath)
 
 //bodyparser
@@ -42,6 +43,7 @@ app.use(passport.session());
 //routes
 app.use("/",require('../src/routes/index'))
 app.use('/users',require('../src/routes/user'))
+app.use('/',require('../src/routes/dashboard'))
 
 app.listen(port,()=>{
     console.log("running")

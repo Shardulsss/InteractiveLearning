@@ -1,0 +1,23 @@
+const express = require('express');
+const router = express.Router();
+const { ensureAuthenticated } = require('../../config/auth')
+
+router.get('/learn',ensureAuthenticated, (req,res)=>{
+    res.render('learn',{
+        name:req.user.name
+    })
+})
+
+router.get('/learn/colours',ensureAuthenticated, (req,res)=>{
+    res.render('learn_colours',{
+        name:req.user.name
+    })
+})
+
+router.get('/learn/numbers',ensureAuthenticated, (req,res)=>{
+    res.render('learn_numbers',{
+        name:req.user.name
+    })
+})
+
+module.exports=router

@@ -1,0 +1,158 @@
+<html>
+  <style>
+     div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-bottom: 10px;
+  }
+  .btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .btn1 {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+    .c_red{
+    background-color: red; /* Green background */
+  border: 1px solid Green; /* Green border */
+  font-size: 100px;
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  width: 100%; /* Set a width if needed */
+  height: 100%;
+  }
+  .c_yellow{
+    background-color: yellow; /* Green background */
+  border: 1px solid Green; /* Green border */
+  font-size: 100px;
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  width: 100%; /* Set a width if needed */
+  height: 100%;
+  }
+  .c_pink{
+    background-color: pink; /* Green background */
+  border: 1px solid Green; /* Green border */
+  font-size: 100px;
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  width: 100%; /* Set a width if needed */
+  height: 100%;
+  }
+  .c_blue{
+    background-color: blue; /* Green background */
+  border: 1px solid Green; /* Green border */
+  font-size: 100px;
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  width: 100%; /* Set a width if needed */
+  height: 100%;
+  } 
+  .c_purple{
+    background-color: purple; /* Green background */
+  border: 1px solid Green; /* Green border */
+  font-size: 100px;
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  width: 100%; /* Set a width if needed */
+  height: 100%;
+  }
+  .c_black{
+    background-color: black; /* Green background */
+  border: 1px solid Green; /* Green border */
+  font-size: 100px;
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  width: 100%; /* Set a width if needed */
+  height: 100%;
+  }
+  
+   </style>
+  
+<body>
+  <div class="sticky">
+      <div style='float: left;'>
+          <a class="btn" href = "/dashboard"><i class="fa fa-home">    </i> Home</a>
+          <button class="btn" onclick="history.back()"><i class="fa fa-        bars"></i> Back</button>
+      </div>
+      <div style='float: right;'>
+          <button class="btn1" onclick="self.close()"><i class="fa fa-  home">    </i> Close</button>
+      </div>
+  </div>
+
+
+  <audio id="aBlack">
+      <source src="../../../dota wtf/first video.mp3" type="audio/ogg">
+  </audio>
+  <audio id="aRed">
+    <source src="../dota wtf/first video.mp3" type="audio/ogg">
+  </audio>
+  <audio id="aPink">
+    <source src="../dota wtf/first video.mp3" type="audio/ogg">
+  </audio>
+  <audio id="aBlue">
+    <source src="../dota wtf/first video.mp3" type="audio/ogg">
+  </audio>
+  <audio id="aPurple">
+    <source src="../dota wtf/first video.mp3" type="audio/ogg">
+  </audio>
+  <audio id="aYellow">
+    <source src="../dota wtf/first video.mp3" type="audio/ogg">
+  </audio>
+  <br></br>
+  
+<div class="container">
+  <button class="c_black" onclick="playAudio('Black')">Black</button>
+  <br></br>
+  <button class="c_red" onclick="playAudio('Red')">Red</button>
+  <br></br>
+  <button class="c_pink" onclick="playAudio('Pink')">Pink</button>
+  <br></br>
+  <button class="c_blue" onclick="playAudio('Blue')">Blue</button>
+  <br></br>
+  <button class="c_purple" onclick="playAudio('Purple')">Purple</button>
+  <br></br>
+  <button class="c_yellow" onclick="playAudio('Yellow')">Yellow</button>
+  <br></br>
+</div>
+
+<script>
+   
+  function playAudio(s) { 
+    if(s=="Black"){
+      var x = document.getElementById("aBlack");
+    }
+    else if(s=="Red"){
+      var x = document.getElementById("aRed");
+    }
+    else if(s=="Pink"){
+      var x = document.getElementById("aPink");
+    }
+    else if(s=="Blue"){
+      var x = document.getElementById("aBlue");
+    }
+    else if(s=="Yellow"){
+      var x = document.getElementById("aYellow");
+    }
+    else if(s=="Purple"){
+      var x = document.getElementById("aPurple");
+    }
+    x.play(); 
+  } 
+  
+
+
+  </script>
+  
+</body>
+  </html>
