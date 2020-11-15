@@ -15,8 +15,18 @@ router.get('/dashboard',ensureAuthenticated, (req,res)=>{
 
 router.get('/test',ensureAuthenticated, (req,res)=>{
     
-    res.render('test',{
+    res.render('trial',{
         name:req.user.name
     })
+})
+
+router.post('/imgdatas',ensureAuthenticated,(req,res)=>{
+    // const imguri = req.body.texti
+    // console.log(imguri)
+    img=req.body.imgURI
+    num=req.body.num
+    console.log(img)
+    console.log(num)
+    res.redirect('/test')
 })
 module.exports = router;

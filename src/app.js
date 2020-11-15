@@ -27,6 +27,7 @@ app.use(express.static('../templates'))
 
 //bodyparser
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
  
 //express sessions
 app.use(session({
