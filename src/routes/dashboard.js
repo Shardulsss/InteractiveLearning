@@ -23,18 +23,18 @@ router.get('/learn/numbers',ensureAuthenticated, (req,res)=>{
 
 
 router.get('/practice',ensureAuthenticated, (req,res)=>{
-    res.render('learn',{
+    res.render('practice',{
         name:req.user.name
     })
 })
 
 router.get('/practice/numbers',ensureAuthenticated, (req,res)=>{
-    res.render('learn',{
+    res.render('practice_numbers',{
         name:req.user.name
     })
 })
 router.get('/practice/alphabets',ensureAuthenticated, (req,res)=>{
-    res.render('learn',{
+    res.render('practice_alphabets',{
         name:req.user.name
     })
 })

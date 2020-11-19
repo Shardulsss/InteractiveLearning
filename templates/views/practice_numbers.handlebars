@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href="../styles/style_practice_numbers.css" />
+  </head>
+  <script type="text/javascript">
+    window.addEventListener("load", () =>{
+  const canvas = document.querySelector("#canvas");
+  const ctx = canvas.getContext("2d");
+
+
+  //Resizing
+  canvas.height = 690;  
+  canvas.width = 1250;
+  
+  var var_display_img = '../images/practice/Practice_Numbers.png'
+  make_base(var_display_img);
+
+  function make_base(image)
+  {
+    var img = image
+    base_image = new Image();
+    base_image.height = 500;
+    base_image.width = 1100;
+    base_image.src = img;
+    
+    base_image.onload = function(){
+      ctx.drawImage(base_image, 0, 0);
+    }
+  }
+
+  //variabels
+  let painting = false;
+
+  function startPosition(){
+    painting = true;
+    draw(e);
+  }
+  function finishedPosition(){
+    painting = false;
+    ctx.beginPath();
+  }
+  function draw(e){
+    if(!painting) return;
+    ctx.lineWidth = 10;
+    ctx.lineCap = "round";
+    ctx.lineTo(e.clientX, e.clientY);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(e.clientX, e.clientY);
+  }
+
+
+  //evet listener
+  canvas.addEventListener('mousedown', startPosition);
+  canvas.addEventListener('mouseup', finishedPosition);
+  canvas.addEventListener('mousemove', draw);
+
+});
+
+
+
+  </script>>
+  <body>
+
+    <canvas  id="canvas"></canvas>
+    </div>
+    <br>
+
+    <div class="p">
+      <div style='float: left;'>
+            <button class="btn" onclick="location.href = 'Practice.html';"><i class="fa fa-        bars"></i> Home</button>
+            <button class="btn" onclick="history.back()"><i class="fa fa-        bars"></i> Back</button>
+            
+      </div>
+      <div style='float: right;'>
+      <button class="btn1" onclick="window.location.href=window.location.href">Clear </button> 
+      </div > 
+    </div>  
+  </body>
+</html>

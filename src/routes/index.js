@@ -49,7 +49,9 @@ router.post('/submittest',ensureAuthenticated,async (req,res)=>{
         else if(marks=="Wrong"){
             m.push(0)
         }
-        
+        if(m.length>8){
+            m.splice(0, 1);
+        }
         user.marks=m
         user.save()
         console.log(m)
