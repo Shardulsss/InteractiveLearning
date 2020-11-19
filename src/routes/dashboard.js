@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { ensureAuthenticated } = require('../../config/auth')
 
+
 router.get('/learn',ensureAuthenticated, (req,res)=>{
     res.render('learn',{
         name:req.user.name

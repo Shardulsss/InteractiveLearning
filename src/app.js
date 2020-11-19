@@ -12,6 +12,8 @@ const passport = require('passport')
 
 const app = express();
 
+
+
 //passport
 require('../config/passport')(passport)
 
@@ -41,10 +43,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+
 //routes
 app.use("/",require('../src/routes/index'))
 app.use('/users',require('../src/routes/user'))
 app.use('/',require('../src/routes/dashboard'))
+
+
 
 app.listen(port,()=>{
     console.log("running")

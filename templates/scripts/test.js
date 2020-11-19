@@ -1,3 +1,4 @@
+// import * as tf from '@tensorflow/tfjs';
 
 
 window.addEventListener("load", () =>{
@@ -72,4 +73,27 @@ const sub = function(){
 	const canvas = document.querySelector("#canvas");
 	var canvasURL = canvas.toDataURL();
 	document.getElementById("image").value = canvasURL;
+}
+
+const Tester = async function(){
+	// const canvas = document.querySelector("#canvas");
+	// const datauri = canvas.toDataURL()
+	// const b = Buffer.from(datauri, 'base64')
+    // get the tensor
+	// const t = tf.node.decodeImage(b)
+	console.log()
+	// let model = await tf.loadGraphModel('../../src/model/model.json')
+	alert("s")
+	console.log("s")
+	
+	
+	// const xhr = new XMLHttpRequest()
+	// const imgData = {
+	// 	imgURI : datauri,
+	// 	num : item
+	// }
+	// xhr.open('POST','/imgdatas')
+	// xhr.setRequestHeader('Content-Type','application/json;charset=UTF-8')
+	// xhr.send(JSON.stringify(imgData))
+	
 }
