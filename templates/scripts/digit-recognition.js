@@ -154,6 +154,7 @@ $("#clear-button").click(async function () {
 	$(".prediction-text").empty();
 	$("#result_box").addClass('d-none');
 	document.getElementById("chartbox").innerHTML = "Result";
+	document.body.style.backgroundColor = "white";
 });
 
 /////load model
@@ -210,37 +211,48 @@ $("#predict-button").click(async function () {
 	console.log(item)
 	// document.getElementById("chartbox").innerHTML = "Correct";
     if(item=="Zero" && i==0){
-        document.getElementById("chartbox").innerHTML = "Correct";
+		document.getElementById("chartbox").innerHTML = "Correct";
+		document.body.style.backgroundColor = "green";
     }
     else if(item=="One" && i==1){
-        document.getElementById("chartbox").innerHTML = "Correct";
+		document.getElementById("chartbox").innerHTML = "Correct";
+		document.body.style.backgroundColor = "green";
     }
     else if(item=="Two" && i==2){
-        document.getElementById("chartbox").innerHTML = "Correct";
+		document.getElementById("chartbox").innerHTML = "Correct";
+		document.body.style.backgroundColor = "green";
     }
     else if(item=="Three" && i==3){
-        document.getElementById("chartbox").innerHTML = "Correct";
+		document.getElementById("chartbox").innerHTML = "Correct";
+		document.body.style.backgroundColor = "green";
     }
     else if(item=="Four" && i==4){
-        document.getElementById("chartbox").innerHTML = "Correct";
+		document.getElementById("chartbox").innerHTML = "Correct";
+		document.body.style.backgroundColor = "green";
     }
     else if(item=="Five" && i==5){
-        document.getElementById("chartbox").innerHTML = "Correct";
+		document.getElementById("chartbox").innerHTML = "Correct";
+		document.body.style.backgroundColor = "green";
     }
     else if(item=="Six" && i==6){
-        document.getElementById("chartbox").innerHTML = "Correct";
+		document.getElementById("chartbox").innerHTML = "Correct";
+		document.body.style.backgroundColor = "green";
     }
     else if(item=="Seven" && i==7){
-        document.getElementById("chartbox").innerHTML = "Correct";
+		document.getElementById("chartbox").innerHTML = "Correct";
+		document.body.style.backgroundColor = "green";
     }
     else if(item=="Eight" && i==8){
-        document.getElementById("chartbox").innerHTML = "Correct";
+		document.getElementById("chartbox").innerHTML = "Correct";
+		document.body.style.backgroundColor = "green";
     }
     else if(item=="Nine" && i==9){
-        document.getElementById("chartbox").innerHTML = "Correct";
+		document.getElementById("chartbox").innerHTML = "Correct";
+		document.body.style.backgroundColor = "green";
     }
     else{
-        document.getElementById("chartbox").innerHTML = "Wrong";
+		document.getElementById("chartbox").innerHTML = "Wrong";
+		document.body.style.backgroundColor = "red";
 	}
 	ans = document.getElementById("chartbox").textContent;
 	const marks = {

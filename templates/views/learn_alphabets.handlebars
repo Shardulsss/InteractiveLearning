@@ -1,43 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<style>
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-bottom: 10px;
+  }
+  .btn {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .btn1 {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .btn2 {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .g{
+    background-color: white;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  padding-top : 2%;
+  padding-bottom : 2%;
+  display: grid;
+  grid-template-areas:
+  
+  'menu menu footer footer right right';
+  background-color: "white";
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
+  
+}
+
+.grid-container > div {
+  background-color: rgb(163, 243, 35);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  padding-left: 8rem;
+}
+
+.img-class{
+    height: 14rem;
+    width:14rem;
+}
+
+</style>
 </head>
+
 <body>
-    <div class="tiles-grid tiles-group size-2" data-group-title="General">
-    <a href="https://github.com/olton/Metro-UI-CSS"
-            data-role="tile" class="bg-indigo">
-        <span class="mif-github icon"></span>
-        <span class="branding-bar">Github</span>
-        <span class="badge-bottom">30</span>
-    </a>
-    <div data-role="tile" class="bg-cyan">
-        <span class="mif-envelop icon"></span>
-        <span class="branding-bar">Email</span>
-        <span class="badge-bottom">10</span>
-    </div>
-    <div data-role="tile" class="bg-orange" data-size="wide">
-        <span class="mif-chrome icon"></span>
-        <span class="branding-bar">Chrome</span>
-    </div>
-    <div data-role="tile" data-size="small">
-        <span class="mif-apple icon"></span>
-    </div>
-    <div data-role="tile" data-size="small" class="bg-red">
-        <span class="mif-bell icon"></span>
-    </div>
-    <div data-role="tile" data-size="small" class="bg-teal col-1 row-6">
-        <span class="mif-windows icon"></span>
-    </div>
-    <div data-role="tile" data-size="small" class="bg-brown col-2 row-6">
-        <span class="mif-wind icon"></span>
-    </div>
-    <div data-role="tile" class="bg-cyan">
-        <span class="mif-table icon"></span>
-        <span class="branding-bar">Tables</span>
-    </div>
+
+<script type="text/javascript">
+
+  function a(){
+    var music = new Audio('../sounds/alphabets/A.mp3');
+    music.play();
+  }
+  function b(){
+    var music = new Audio('../sounds/alphabets/B.mp3');
+    music.play();
+  }
+  function c(){
+    var music = new Audio('../sounds/alphabets/C.mp3');
+    music.play();
+  }
+  function d(){
+    var music = new Audio('../sounds/alphabets/D.mp3');
+    music.play();
+  }
+  function e(){
+    var music = new Audio('../sounds/alphabets/E.mp3');
+    music.play();
+  }
+  function f(){
+    var music = new Audio('../sounds/alphabets/F.mp3');
+    music.play();
+  }
+  function g(){
+    var music = new Audio('../sounds/alphabets/G.mp3');
+    music.play();
+  }
+  function h(){
+    var music = new Audio('../sounds/alphabets/H.mp3');
+    music.play();
+  }
+  function i(){
+    var music = new Audio('../sounds/alphabets/I.mp3');
+    music.play();
+  }
+  function j(){
+    var music = new Audio('../sounds/alphabets/J.mp3');
+    music.play();
+  }
+  function k(){
+    var music = new Audio('../sounds/alphabets/K.mp3');
+    music.play();
+  }
+  function l(){
+    var music = new Audio('../sounds/alphabets/L.mp3');
+    music.play();
+  }
+  function m(){
+    var music = new Audio('../sounds/alphabets/M.mp3');
+    music.play();
+  }
+  function n(){
+    var music = new Audio('../sounds/alphabets/N.mp3');
+    music.play();
+  }
+  function o(){
+    var music = new Audio('../sounds/alphabets/O.mp3');
+    music.play();
+  }
+  function p(){
+    var music = new Audio('../sounds/alphabets/P.mp3');
+    music.play();
+  }
+  function q(){
+    var music = new Audio('../sounds/alphabets/Q.mp3');
+    music.play();
+  }
+  function r(){
+    var music = new Audio('../sounds/alphabets/R.mp3');
+    music.play();
+  }
+  function s(){
+    var music = new Audio('../sounds/alphabets/S.mp3');
+    music.play();
+  }
+  function t(){
+    var music = new Audio('../sounds/alphabets/T.mp3');
+    music.play();
+  }
+  function u(){
+    var music = new Audio('../sounds/alphabets/U.mp3');
+    music.play();
+  }
+  function v(){
+    var music = new Audio('../sounds/alphabets/V.mp3');
+    music.play();
+  }
+  function w(){
+    var music = new Audio('../sounds/alphabets/W.mp3');
+    music.play();
+  }
+  function x(){
+    var music = new Audio('../sounds/alphabets/X.mp3');
+    music.play();
+  }
+  function y(){
+    var music = new Audio('../sounds/alphabets/Y.mp3');
+    music.play();
+  }
+  function z(){
+    var music = new Audio('../sounds/alphabets/Z.mp3');
+    music.play();
+  }
+</script>
+
+<div class="sticky">
+      <div style='float: left;'>
+          <button class="btn" onclick="location.href = 'learn.html';"><i class="fa fa-home">    </i> Home</button>
+          <button class="btn" onclick="history.back()"><i class="fa fa- bars"></i> Back</button>
+      </div>
+      <div style='float: right;'>
+          <button class="btn1" onclick="open(location, '_self').close()"><i class="fa fa-  home">    </i> Close</button>
+      </div>
+  </div>
 </div>
+  <br></br>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/A.png"/></div>
+    
+   <div class="item4"><button class="btn2" onclick="a()">play</button></div>
+  <div class="item5"><font color="red" size = '10px'><h1>Apple</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/B.png"/></div>
+  
+  <div class="item4"><button class="btn2" onclick="b()">play</button></div>
+  <div class="item5"><font color="blue" size = '10px'><h1>Ball</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/C.png"/></div>
+   
+  <div class="item4"><button class="btn2" onclick="c()">play</button></div>
+  <div class="item5"><font color="grey" size = '10px'><h1>Cat</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/D.png"/></div>
+ 
+<div class="item4"><button class="btn2" onclick="d()">play</button></div>
+<div class="item5"><font color="yellow" size = '10px'><h1>Dog</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/E.png"/></div>
+  
+  <div class="item4"><button class="btn2" onclick="e()">play</button></div>
+  <div class="item5"><font color="black" size = '10px'><h1>Elelphant</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/F.png"/></div>
+ 
+ <div class="item4"><button class="btn2" onclick="f()">play</button></div>
+ <div class="item5"><font color="orange" size = '10px'><h1>Frog</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/G.png"/></div>
+ 
+<div class="item4"><button class="btn2" onclick="g()">play</button></div>
+<div class="item5"><font color="purple" size = '10px'><h1>Goat</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/H.png"/></div>
+  
+<div class="item4"><button class="btn2" onclick="h()">play</button></div>
+<div class="item5"><font color="blue" size = '10px'><h1>Hat</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/I.png"/></div>
+  
+ <div class="item4"><button class="btn2" onclick="i()">play</button></div>
+ <div class="item5"><font color="blue" size = '10px'><h1>Ice</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/J.png"/></div>
+
+<div class="item4"><button class="btn2" onclick="j()">play</button></div>
+<div class="item5"><font color="red" size = '10px'><h1>Jackal</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/K.png"/></div>
+ 
+<div class="item4"><button class="btn2" onclick="k()">play</button></div>
+<div class="item5"><font color="green" size = '10px'><h1>King</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/L.png"/></div>
+
+<div class="item4"><button class="btn2" onclick="l()">play</button></div>
+<div class="item5"><font color="blue" size = '10px'><h1>Lion</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/M.png"/></div>
+ 
+ <div class="item4"><button class="btn2" onclick="m()">play</button></div>
+ <div class="item5"><font color="grey" size = '10px'><h1>Mango</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/N.png"/></div>
+  
+ <div class="item4"><button class="btn2" onclick="n()">play</button></div>
+ <div class="item5"><font color="black" size = '10px'><h1>Nest</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/O.png"/></div>
+  
+  <div class="item4"><button class="btn2" onclick="o()">play</button></div>
+  <div class="item5"><font color="orange" size = '10px'><h1>Owl</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/P.png"/></div>
+ 
+<div class="item4"><button class="btn2" onclick="p()">play</button></div>
+<div class="item5"><font color="yellow" size = '10px'><h1>Parrot</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/Q.png"/></div>
+ 
+<div class="item4"><button class="btn2" onclick="q()">play</button></div>
+<div class="item5"><font color="blue" size = '10px'><h1>Queen</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/R.png"/></div>
+ 
+<div class="item4"><button class="btn2" onclick="r()">play</button></div>
+<div class="item5"><font color="black" size = '10px'><h1>Rabbit</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/S.png"/></div>
+
+<div class="item4"><button class="btn2" onclick="s()">play</button></div>
+<div class="item5"><font color="green" size = '10px'><h1>Sheep</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/T.png"/></div>
+  
+<div class="item4"><button class="btn2" onclick="t()">play</button></div>
+<div class="item5"><font color="grey" size = '10px'><h1>Tomato</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/U.png"/></div>
+  
+ <div class="item4"><button class="btn2" onclick="u()">play</button></div>
+ <div class="item5"><font color="green" size = '10px'><h1>Umbrella</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/V.png"/></div>
+
+<div class="item4"><button class="btn2" onclick="v()">play</button></div>
+<div class="item5"><font color="yellow" size = '10px'><h1>Van</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/W.png"/></div>
+  
+<div class="item4"><button class="btn2" onclick="w()">play</button></div>
+<div class="item5"><font color="black" size = '10px'><h1>Watch</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/X.png"/></div>
+
+<div class="item4"><button class="btn2" onclick="x()">play</button></div>
+<div class="item5"><font color="purple" size = '10px'><h1>Xylophone</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/Y.png"/></div>
+ 
+<div class="item4"><button class="btn2" onclick="y()">play</button></div>
+<div class="item5"><font color="yellow" size = '10px'><h1>Yatch</h1></fonts></div>
+</div>
+<div class="grid-container">
+  
+  <div class="item2  "><img class="img-class"  src="../images/alphabets/Z.png"/></div>
+ 
+<div class="item4"><button class="btn2" onclick="z()">play</button></div>
+ <div class="item5"><font color="blue" size = '10px'><h1>Zebra</h1></fonts></div>
+</div>
+
+
 </body>
 </html>

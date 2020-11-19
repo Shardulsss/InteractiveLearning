@@ -21,6 +21,12 @@ router.get('/learn/numbers',ensureAuthenticated, (req,res)=>{
     })
 })
 
+router.get('/learn/alphabets',ensureAuthenticated, (req,res)=>{
+    res.render('learn_alphabets',{
+        name:req.user.name
+    })
+})
+
 
 router.get('/practice',ensureAuthenticated, (req,res)=>{
     res.render('practice',{
