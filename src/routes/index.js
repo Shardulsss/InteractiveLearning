@@ -5,6 +5,9 @@ const { ensureAuthenticated } = require('../../config/auth')
 const User = require('../models/User')
 
 router.use('/test',ratelimit);
+router.use('/testlvl1',ratelimit);
+
+
 router.get('/',(req,res)=>{
     res.render('index')
 })
@@ -25,6 +28,19 @@ router.get('/dashboard',ensureAuthenticated, async (req,res)=>{
     res.render('dashboard',{
         name:req.user.name,
         score:score
+    })
+})
+
+router.get('/testdashboard',ensureAuthenticated,(req,res)=>{
+    res.render('testdashboard',{
+        name:req.user.name
+    })
+})
+
+router.get('/testlvl1',ensureAuthenticated, (req,res)=>{
+
+    res.render('testlvl1',{
+        name:req.user.name
     })
 })
 

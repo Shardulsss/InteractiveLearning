@@ -209,48 +209,64 @@ $("#predict-button").click(async function () {
 	console.log(i)
 	prediction=i
 	console.log(item)
+
+	var boo = new Audio('../sounds/boo.mp3');
+	var applause = new Audio('../sounds/applause.mp3');
+    
 	// document.getElementById("chartbox").innerHTML = "Correct";
     if(item=="Zero" && i==0){
+		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
+
     }
     else if(item=="One" && i==1){
+		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
     }
     else if(item=="Two" && i==2){
+		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
     }
     else if(item=="Three" && i==3){
+		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
     }
     else if(item=="Four" && i==4){
+		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
     }
     else if(item=="Five" && i==5){
+		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
     }
     else if(item=="Six" && i==6){
+		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
     }
     else if(item=="Seven" && i==7){
+		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
     }
     else if(item=="Eight" && i==8){
+		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
     }
     else if(item=="Nine" && i==9){
+		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
     }
     else{
+		boo.play();
 		document.getElementById("chartbox").innerHTML = "Wrong";
 		document.body.style.backgroundColor = "red";
 	}

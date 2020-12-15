@@ -9,7 +9,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
     <script>
         var items = ["Zero","One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
-        var item = items[Math.floor(Math.random()*items.length)];
+        var imgitem = Math.floor(Math.random()*items.length);
+        var item = items[imgitem]
+        
     </script>
 	
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >    
@@ -26,8 +28,16 @@
 					
 				</div>
 				
-                <h1 class="col-6">Draw</h1>
-                <h1 class="col-6" id="number"><Script>document.getElementById("number").innerHTML = item</Script></h1>
+                {{!-- <h1 class="col-6">Draw</h1> --}}
+                <div>
+                    <h1 class="col-6">Draw</h1>
+                <div id="qimg" class="question-image">
+                    <script>document.getElementById('qimg').innerHTML = '<img src="../images/numbers/' + imgitem + '.png" class="card-img-top" alt="..." style="height: 10rem; width: 15rem;"/>';
+                    </script>
+                </div>
+                </div>
+                {{!-- <img src="../images/testlvl1.jpg" class="card-img-top" alt="..." style="height: 10rem; width: 15rem;" id="qimg"> --}}
+                
 					<div class="flex-two">
 						<div id="canvas_box_wrapper" class="canvas-box-wrapper">
 							<div id="canvas_box" class="canvas-box"></div>
@@ -43,7 +53,7 @@
 							
 							<div class="col-12">
 								
-								<a class="btn btn-dark" href="/test">Next</a>
+								<a class="btn btn-dark" href="/testlvl1">Next</a>
 							</div>
 							<br><br>
 							<h1 id="chartbox"><Script>document.getElementById("chartbox").innerHTML = "Result"</Script></h1>
