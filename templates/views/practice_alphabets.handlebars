@@ -11,7 +11,7 @@
 
   //Resizing
   canvas.height = 690;  
-  canvas.width = 1350;
+  canvas.width = 1500;
   
   var var_display_img = '../images/practice/Practice_Alphabets.png'
   
@@ -40,7 +40,7 @@
   }
   function draw(e){
     if(!painting) return;
-    ctx.lineWidth = 10;
+    ctx.lineWidth = 20;
     ctx.lineCap = "round";
     ctx.lineTo(e.clientX, e.clientY);
     ctx.stroke();

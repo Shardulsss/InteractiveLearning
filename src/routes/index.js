@@ -4,8 +4,8 @@ const ratelimit = require('../middleware/ratelimit');
 const { ensureAuthenticated } = require('../../config/auth')
 const User = require('../models/User')
 
-router.use('/test',ratelimit);
-router.use('/testlvl1',ratelimit);
+router.use('/test',ratelimit.limiter1);
+router.use('/testlvl1',ratelimit.limiter2);
 
 
 router.get('/',(req,res)=>{

@@ -20,8 +20,8 @@
   {
     var img = image
     base_image = new Image();
-    base_image.height = 500;
-    base_image.width = 1100;
+    base_image.height = 690;
+    base_image.width = 1500;
     base_image.src = img;
     
     base_image.onload = function(){
@@ -42,7 +42,7 @@
   }
   function draw(e){
     if(!painting) return;
-    ctx.lineWidth = 10;
+    ctx.lineWidth = 20;
     ctx.lineCap = "round";
     ctx.lineTo(e.clientX, e.clientY);
     ctx.stroke();

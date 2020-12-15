@@ -5,7 +5,7 @@ var canvasWidth           	= 300;
 var canvasHeight 			= 300;
 var canvasStrokeStyle		= "white";
 var canvasLineJoin			= "round";
-var canvasLineWidth       	= 10;
+var canvasLineWidth       	= 20;
 var canvasBackgroundColor 	= "black";
 var canvasId              	= "canvas";
 
@@ -212,6 +212,8 @@ $("#predict-button").click(async function () {
 
 	var boo = new Audio('../sounds/boo.mp3');
 	var applause = new Audio('../sounds/applause.mp3');
+
+	
     
 	// document.getElementById("chartbox").innerHTML = "Correct";
     if(item=="Zero" && i==0){

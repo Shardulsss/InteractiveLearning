@@ -9,8 +9,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
     <script>
         var items = ["Zero","One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
-        var item = items[Math.floor(Math.random()*items.length)];
-    </script>
+        var n = Math.floor(Math.random()*items.length)
+		var item = items[n];
+	</script>
 	
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >    
 	<link rel="stylesheet" type="text/css" href="styles/trial.css">
@@ -27,7 +28,11 @@
 				</div>
 				
                 <h1 class="col-6">Draw</h1>
-                <h1 class="col-6" id="number"><Script>document.getElementById("number").innerHTML = item</Script></h1>
+                <h1 class="col-6" id="number">
+					<Script>
+						document.getElementById("number").innerHTML = item;
+						
+					</Script></h1>
 					<div class="flex-two">
 						<div id="canvas_box_wrapper" class="canvas-box-wrapper">
 							<div id="canvas_box" class="canvas-box"></div>
@@ -57,7 +62,6 @@
 		</div>
 		<h1 id="chartbox"><Script>document.getElementById("chartbox").innerHTML = "Result"</Script></h1>
 	</main>   
-    
 
 	<script src="../scripts/digit-recognition.js"></script>
 </body>
