@@ -44,9 +44,25 @@ router.get('/testlvl1',ensureAuthenticated, (req,res)=>{
     })
 })
 
+
+
 router.get('/test',ensureAuthenticated, (req,res)=>{
 
     res.render('newmodel',{
+        name:req.user.name
+    })
+})
+
+router.get('/testaddition',ensureAuthenticated, (req,res)=>{
+
+    res.render('testadd',{
+        name:req.user.name
+    })
+})
+
+router.get('/testscount',ensureAuthenticated, (req,res)=>{
+
+    res.render('testcounts',{
         name:req.user.name
     })
 })

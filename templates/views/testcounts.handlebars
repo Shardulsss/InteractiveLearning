@@ -8,9 +8,12 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
     <script>
-        var items = ["Zero","One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
-        var imgitem = Math.floor(Math.random()*items.length);
-        var item = items[imgitem]
+        var itemsAll = ["Zero","One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+        var imgitem = Math.floor(Math.random()*10);
+        if (imgitem==0){
+            imgitem=imgitem+2;
+        }
+        var item = itemsAll[imgitem]
         
     </script>
 	
@@ -27,18 +30,16 @@
 					<div class="col-12"><h3>Test Here</h3></div>
 					
 				</div>
-				
+				<br>
                 {{!-- <h1 class="col-6">Draw</h1> --}}
                 <div>
-                    <h1 class="col-6">Draw</h1>
-                
+                    <h1 class="col-6">Count</h1>
                 </div>
-                {{!-- <img src="../images/testlvl1.jpg" class="card-img-top" alt="..." style="height: 10rem; width: 15rem;" id="qimg"> --}}
-					<div class="flex-two">
+                <div class="flex-two">
                     <div id="qimg" class="question-image col-sm-3">
-                    <script>document.getElementById('qimg').innerHTML = '<img src="../images/numbers/' + imgitem + '.png" class="card-img-top" alt="..." style="height: 20rem; width: 20rem;"/>';
-                    </script>
-                	</div>
+                        <script>document.getElementById('qimg').innerHTML = '<img src="../images/numbers/counters/' + imgitem + 'o.png" class="card-img-top" alt="..." style="height: 20rem; width: 20rem;"/>';
+                        </script>
+                    </div>
                     
 
                     <div class="col-6" style="margin-left: 10rem;">
@@ -58,7 +59,7 @@
                                 <div class="col-1"></div>
 							    <div class="col-3">
 								
-								    <a class="btn btn-dark" href="/testlvl1">Next</a>
+								    <a class="btn btn-dark" href="/testscount">Next</a>
 							    </div>
                             </div>
 							<br><br>
@@ -68,8 +69,7 @@
 							</div>
 							<div class="col-12 d-block mt-2 mt-md-0 text-md-left prediction-text"></div>
 						</div>
-
-
+                </div>
 
 					
 			</div>
