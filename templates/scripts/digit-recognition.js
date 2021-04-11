@@ -213,64 +213,112 @@ $("#predict-button").click(async function () {
 	var boo = new Audio('../sounds/boo.mp3');
 	var applause = new Audio('../sounds/applause.mp3');
 
+
+	//success and failure modal
 	
+	var modal = document.getElementById("myModal");
+	var img = new Image()
+	img.src='../images/success.png'   ///success
+
+	var img2 = new Image()
+	img2.src='../images/fail.png'  ////fail
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	
+	var span = document.getElementsByClassName("close")[0];
+	span.onclick = function() { 
+		modal.style.display = "none";
+  	}
     
 	// document.getElementById("chartbox").innerHTML = "Correct";
     if(item=="Zero" && i==0){
 		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
+		modal.style.display = "block";
+  		modalImg.src = img.src;
+  		captionText.innerHTML = img.alt;
 
     }
     else if(item=="One" && i==1){
 		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
+		modal.style.display = "block";
+  		modalImg.src = img.src;
+  		captionText.innerHTML = img.alt;		
     }
     else if(item=="Two" && i==2){
 		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
+		modal.style.display = "block";
+  		modalImg.src = img.src;
+  		captionText.innerHTML = img.alt;
     }
     else if(item=="Three" && i==3){
 		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
+		modal.style.display = "block";
+  		modalImg.src = img.src;
+  		captionText.innerHTML = img.alt;
     }
     else if(item=="Four" && i==4){
 		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
+		modal.style.display = "block";
+  		modalImg.src = img.src;
+  		captionText.innerHTML = img.alt;
     }
     else if(item=="Five" && i==5){
 		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
+		modal.style.display = "block";
+  		modalImg.src = img.src;
+  		captionText.innerHTML = img.alt;
     }
     else if(item=="Six" && i==6){
 		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
+		modal.style.display = "block";
+  		modalImg.src = img.src;
+  		captionText.innerHTML = img.alt;
     }
     else if(item=="Seven" && i==7){
 		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
+		modal.style.display = "block";
+  		modalImg.src = img.src;
+  		captionText.innerHTML = img.alt;
     }
     else if(item=="Eight" && i==8){
 		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
+		modal.style.display = "block";
+  		modalImg.src = img.src;
+  		captionText.innerHTML = img.alt;
     }
     else if(item=="Nine" && i==9){
 		applause.play();
 		document.getElementById("chartbox").innerHTML = "Correct";
 		document.body.style.backgroundColor = "green";
+		modal.style.display = "block";
+  		modalImg.src = img.src;
+  		captionText.innerHTML = img.alt;
     }
     else{
 		boo.play();
 		document.getElementById("chartbox").innerHTML = "Wrong";
 		document.body.style.backgroundColor = "red";
+		modal.style.display = "block";
+  		modalImg.src = img2.src;
+  		captionText.innerHTML = img2.alt;
 	}
 	ans = document.getElementById("chartbox").textContent;
 	const marks = {

@@ -4,50 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles/trial.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">iLearn</a>
+    <nav class="navbar custom-nav shadow-lg">
+        <a class="navbar-brand head-name" href="/dashboard">i-Learn</a>
         
         <form method="get" action="/users/logout">
         
-            <button type="submit" class="btn btn-light">Logout</button>
+            <button type="submit" class="btn btn-light shadow">Logout</button>
         </form>
         
     </nav>
     <div class="jumbotron">
-        <h2>Welcome {{name}}</h2>
-        <h3>Your score: {{score}}</h3>
+        <div>
+            <h2 class="cust-text">Welcome {{name}}</h2>
+            <h3 class="cust-text">Your score: {{score}}</h3>
+        </div>
+        
         <br><br>
         
         <div class="row"  style="margin-left:100px;">
             <div class="col-sm-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card shadow-lg">
                     <img src="../images/learn2.png" class="card-img-top" alt="..." style="height: 10rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Learn</h5>
+                        <h4 class="card-title cust-text">Learn</h4>
                         <p class="card-text">Learning never stops.</p>
-                        <a href="/learn" class="btn btn-primary">Let's Go</a>
+                        <a href="/learn" class="btn custom-button btn-primary shadow">Let's Go</a>
                     </div>
                 </div>
             </div>
              <div class="col-sm-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card shadow-lg">
                     <img src="../images/practice.png" class="card-img-top" alt="..." style="height: 10rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Practice</h5>
+                        <h4 class="card-title cust-text">Practice</h4>
                         <p class="card-text">Practice makes man perfect.</p>
-                        <a href="/practice" class="btn btn-primary">Let's Go</a>
+                        <a href="/practice" class="btn custom-button btn-primary shadow">Let's Go</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card shadow-lg">
                     <img src="../images/test.png" class="card-img-top" alt="..." style="height: 10rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Test</h5>
+                        <h4 class="card-title cust-text">Test</h4>
                         <p class="card-text">Test your knowledge.</p>
-                        <a href="/testdashboard" class="btn btn-primary">Let's Go</a>
+                        <a href="/testdashboard" class="btn custom-button btn-primary shadow">Let's Go</a>
                     </div>
                 </div>
             </div>          

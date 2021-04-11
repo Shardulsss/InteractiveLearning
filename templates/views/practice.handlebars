@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice</title>
+    <link rel="stylesheet" type="text/css" href="styles/trial.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">iLearn</a>
+    <nav class="navbar custom-nav shadow-lg">
+        <a class="navbar-brand head-name" href="/dashboard">i-Learn</a>
         
         <form method="get" action="/users/logout">
         
-            <button type="submit" class="btn btn-light">Logout</button>
+            <button type="submit" class="btn btn-light shadow">Logout</button>
         </form>
         
     </nav>
@@ -23,23 +26,23 @@
         <div class="row" style="margin-left:100px;">
             
              <div class="col-sm-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card shadow-lg">
                     <img src="../images/numbers.png" class="card-img-top" alt="..." style="height: 10rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Numbers</h5>
+                        <h4 class="card-title cust-text">Numbers</h4>
                         <p class="card-text">Practice by drawing numbers.</p>
-                        <a href="/practice/numbers" class="btn btn-primary">Let's Go</a>
+                        <a href="/practice/numbers" class="btn custom-button btn-primary shadow">Let's Go</a>
                         
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card shadow-lg">
                     <img src="../images/alpha.png" class="card-img-top" alt="..." style="height: 10rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Alphabets</h5>
+                        <h4 class="card-title cust-text">Alphabets</h4>
                         <p class="card-text">Practice by drawing alphabets.</p>
-                        <a href="/practice/alphabets" class="btn btn-primary">Let's Go</a>
+                        <a href="/practice/alphabets" class="btn custom-button btn-primary shadow">Let's Go</a>
                     </div>
                 </div>
             </div>          
