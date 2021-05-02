@@ -218,10 +218,10 @@ $("#predict-button").click(async function () {
 	
 	var modal = document.getElementById("myModal");
 	var img = new Image()
-	img.src='../images/success.png'   ///success
+	img.src='../images/success2.png'   ///success
 
 	var img2 = new Image()
-	img2.src='../images/fail.png'  ////fail
+	img2.src='../images/fail2.png'  ////fail
 	var modalImg = document.getElementById("img01");
 	var captionText = document.getElementById("caption");
 	

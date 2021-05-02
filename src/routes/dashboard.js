@@ -3,6 +3,8 @@ const router = express.Router();
 const { ensureAuthenticated } = require('../../config/auth')
 
 
+
+
 router.get('/learn',ensureAuthenticated, (req,res)=>{
     res.render('learn',{
         name:req.user.name
@@ -31,6 +33,32 @@ router.get('/learn/alphabets',ensureAuthenticated, (req,res)=>{
 router.get('/practice',ensureAuthenticated, (req,res)=>{
     res.render('practice',{
         name:req.user.name
+    })
+})
+
+router.get('/fun',ensureAuthenticated, (req,res)=>{
+    res.render('fun_dashboard',{
+        name:req.user.name
+    })
+})
+
+router.get('/stories',ensureAuthenticated, (req,res)=>{
+    const stories = ["_xEDCg-9lIw","WbliHNs4q14","e4Uq8O5ZhUA"]
+    const num = Math.floor(Math.random()*stories.length);
+    const story=stories[num]
+    res.render('stories',{
+        name:req.user.name,
+        story:story
+    })
+})
+
+router.get('/stories',ensureAuthenticated, (req,res)=>{
+    const stories = ["_xEDCg-9lIw","WbliHNs4q14","e4Uq8O5ZhUA"]
+    const num = Math.floor(Math.random()*stories.length);
+    const story=stories[num]
+    res.render('rhymes',{
+        name:req.user.name,
+        story:story
     })
 })
 
