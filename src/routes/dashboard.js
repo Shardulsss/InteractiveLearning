@@ -43,7 +43,8 @@ router.get('/fun',ensureAuthenticated, (req,res)=>{
 })
 
 router.get('/stories',ensureAuthenticated, (req,res)=>{
-    const stories = ["_xEDCg-9lIw","WbliHNs4q14","e4Uq8O5ZhUA"]
+    const stories = ["6HqZLdwdBIY","hl37dhen8_0","o_MUyflsE_4","f90Xd7vKUHs","srGV9lPM-AM","zTk7G73kbHo","MrXM-Ubq8XY","1WaQuoN_-r4","w17XH9-Y6vY"]
+    
     const num = Math.floor(Math.random()*stories.length);
     const story=stories[num]
     res.render('stories',{
@@ -53,7 +54,7 @@ router.get('/stories',ensureAuthenticated, (req,res)=>{
 })
 
 router.get('/stories',ensureAuthenticated, (req,res)=>{
-    const stories = ["_xEDCg-9lIw","WbliHNs4q14","e4Uq8O5ZhUA"]
+    const stories = ["0oKreL1jvkg","RLMJmJ_IdnQ","-JRJibhgwUQ","Ru7IWs-QbZk","bPLy_BczvHk","FXKQBeNxAjQ"]
     const num = Math.floor(Math.random()*stories.length);
     const story=stories[num]
     res.render('rhymes',{
