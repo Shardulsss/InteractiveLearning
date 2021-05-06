@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" type="text/css" href="styles/trial.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Major+Mono+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar custom-nav shadow-lg">
+        <a class="navbar-brand head-name" href="/dashboard">i-Learn</a>
+        
+        <form method="get" action="/users/logout">
+        
+            <button type="submit" class="btn btn-light shadow">Logout</button>
+        </form>
+        
+    </nav>
+    <div class="jumbotron">
+        <h2>Welcome {{name}}</h2>
+        <h3>-----------------</h3>
+        <br><br>
+        
+        <div class="row" style="margin-left:100px;">
+            
+             <div class="col-sm-4">
+                <div class="card shadow-lg">
+                    <img src="../images/stories.jpg" class="card-img-top" alt="..." style="height: 10rem;">
+                    <div class="card-body">
+                        <h4 class="card-title cust-text">English stories</h4>
+                        <p class="card-text">Listen moral stories.</p>
+                        <a href="/stories-english" class="btn custom-button btn-primary shadow">Let's Go</a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card shadow-lg">
+                    <img src="../images/rhymes.jpg" class="card-img-top" alt="..." style="height: 10rem;">
+                    <div class="card-body">
+                        <h4 class="card-title cust-text">Marathi stories</h4>
+                        <p class="card-text">Listen stories.</p>
+                        <a href="/stories-marathi" class="btn custom-button btn-primary shadow">Let's Go</a>
+                    </div>
+                </div>
+            </div>  
+            <div class="col-sm-4">
+                <div class="card shadow-lg">
+                    <img src="../images/rhymes.jpg" class="card-img-top" alt="..." style="height: 10rem;">
+                    <div class="card-body">
+                        <h4 class="card-title cust-text">Hindi stories</h4>
+                        <p class="card-text">Listen stories.</p>
+                        <a href="/stories-hindi" class="btn custom-button btn-primary shadow">Let's Go</a>
+                    </div>
+                </div>
+            </div>           
+
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+</body>
+</html>

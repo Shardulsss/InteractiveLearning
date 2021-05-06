@@ -43,7 +43,34 @@ router.get('/fun',ensureAuthenticated, (req,res)=>{
 })
 
 router.get('/stories',ensureAuthenticated, (req,res)=>{
-    const stories = ["6HqZLdwdBIY","hl37dhen8_0","o_MUyflsE_4","f90Xd7vKUHs","srGV9lPM-AM","zTk7G73kbHo","MrXM-Ubq8XY","1WaQuoN_-r4","w17XH9-Y6vY"]
+    
+    res.render('story_dash',{
+        name:req.user.name
+    })
+})
+
+router.get('/stories-english',ensureAuthenticated, (req,res)=>{
+    const stories = ["h2Xj-A7HsYE","srGV9lPM-AM","zTk7G73kbHo"]
+    
+    const num = Math.floor(Math.random()*stories.length);
+    const story=stories[num]
+    res.render('stories',{
+        name:req.user.name,
+        story:story
+    })
+})
+router.get('/stories-marathi',ensureAuthenticated, (req,res)=>{
+    const stories = ["MrXM-Ubq8XY","1WaQuoN_-r4","w17XH9-Y6vY"]
+    
+    const num = Math.floor(Math.random()*stories.length);
+    const story=stories[num]
+    res.render('stories',{
+        name:req.user.name,
+        story:story
+    })
+})
+router.get('/stories-hindi',ensureAuthenticated, (req,res)=>{
+    const stories = ["6HqZLdwdBIY","hl37dhen8_0","o_MUyflsE_4"]
     
     const num = Math.floor(Math.random()*stories.length);
     const story=stories[num]
@@ -53,8 +80,15 @@ router.get('/stories',ensureAuthenticated, (req,res)=>{
     })
 })
 
-router.get('/stories',ensureAuthenticated, (req,res)=>{
-    const stories = ["0oKreL1jvkg","RLMJmJ_IdnQ","-JRJibhgwUQ","Ru7IWs-QbZk","bPLy_BczvHk","FXKQBeNxAjQ"]
+router.get('/rhymes',ensureAuthenticated, (req,res)=>{
+    
+    res.render('rhymes_dash',{
+        name:req.user.name
+    })
+})
+
+router.get('/rhymes-english',ensureAuthenticated, (req,res)=>{
+    const stories = ["0oKreL1jvkg","RLMJmJ_IdnQ","-JRJibhgwUQ"]
     const num = Math.floor(Math.random()*stories.length);
     const story=stories[num]
     res.render('rhymes',{
@@ -62,6 +96,25 @@ router.get('/stories',ensureAuthenticated, (req,res)=>{
         story:story
     })
 })
+router.get('/rhymes-marathi',ensureAuthenticated, (req,res)=>{
+    const stories = ["Ru7IWs-QbZk","bPLy_BczvHk","FXKQBeNxAjQ"]
+    const num = Math.floor(Math.random()*stories.length);
+    const story=stories[num]
+    res.render('rhymes',{
+        name:req.user.name,
+        story:story
+    })
+})
+router.get('/rhymes-hindi',ensureAuthenticated, (req,res)=>{
+    const stories = ["4Cfq61KoUxw","i35AUg11hvo","qByw-9beRml"]
+    const num = Math.floor(Math.random()*stories.length);
+    const story=stories[num]
+    res.render('rhymes',{
+        name:req.user.name,
+        story:story
+    })
+})
+
 
 router.get('/practice/numbers',ensureAuthenticated, (req,res)=>{
     res.render('practice_numbers',{
